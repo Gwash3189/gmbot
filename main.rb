@@ -1,9 +1,7 @@
-require 'slack-ruby-bot'
+require 'bundler'
+Bundler.require
 
-class GmBot < SlackRubyBot::Bot
-  command 'ping' do |client, data, match|
-    client.say(text: 'pong', channel: data.channel)
-  end
-end
+require './gmbot'
+require './models/index'
 
 GmBot.run
