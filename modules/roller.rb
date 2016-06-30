@@ -24,10 +24,10 @@ module Roller
   end
 
   def self.roll_dice(times, dice)
-    result = 1
+    result = 0
 
-    (1..times).each do |sum|
-      result = rand(1..(dice - 1)) + sum
+    (1..times).each do
+      result = rand(1..(dice - 1)) + result
     end
 
     result
